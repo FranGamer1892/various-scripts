@@ -29,6 +29,6 @@ for file_name in os.listdir(src_folder):
         wav_shifted = pw.synthesize(f0_shifted, sp, ap, sr)
 
         # Save the pitch-shifted WAV file
-        dst_file_name = file_name.split(".")[0] + "_shifted.wav"
+        dst_file_name = file_name.split(".")[0] + ".wav"
         dst_file_path = os.path.join(dst_folder, dst_file_name)
         sf.write(dst_file_path, wav_shifted, sr)
